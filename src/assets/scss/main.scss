@@ -1,0 +1,32 @@
+//SCSS МИКСИН ДЛЯ ПОДКЛЮЧЕНИЯ ШРИФТОВ
+@mixin font($font_name, $file_name, $weight, $style) {
+    @font-face {
+        font-family: $font_name;
+        font-display: swap;
+        src: url("../fonts/#{$file_name}.woff") format("woff"), url("../fonts/#{$file_name}.woff2") format("woff2");
+        font-weight: #{$weight};
+        font-style: #{$style};
+    }
+}
+
+@import "utils/libs.scss";
+@import "utils/vars.scss";
+@import "utils/mixins.scss";
+@import "utils/fonts.scss";
+@import "utils/AModernCSSReset.scss";
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    min-height: 100vh;
+    min-width: 100vh;
+}
+
+.content-wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+@import "modules/block.scss";
