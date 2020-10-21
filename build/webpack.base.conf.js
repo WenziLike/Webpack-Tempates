@@ -12,8 +12,8 @@ const PATHS = {
     assets: 'assets/'
 }
 
-const PAGES_DIR = `${PATHS.src}/pug/pages`
-const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.pug'))
+const PAGES_DIR = `${PATHS.src}`
+const PAGES = fs.readdirSync(PAGES_DIR).filter(fileName => fileName.endsWith('.html'))
 
 module.exports = {
 
@@ -43,35 +43,30 @@ module.exports = {
     },
     module: {
         rules: [
+            // js Babel
             {
-                // PUG
-                test: /\.pug$/,
-                loader: 'pug-loader',
-            },
-            {
-                // js Babel
                 test: /\.js$/,// настройка Babel
                 loader: 'babel-loader',
                 exclude: '/node_modules'// исключил обработку библиотек
             },
+            // Fonts
             {
-                // Fonts
                 test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]'
                 }
             },
+            // images / icons
             {
-                // images / icons
                 test: /\.(png|jpg|gif|svg)$/,// настройка картинок
                 loader: 'file-loader',
                 options: {
                     name: '[name].[ext]'
                 }
             },
+            // Scss Style
             {
-                // Scss Style
                 test: /\.scss$/,
                 use: [
                     'style-loader',
@@ -94,8 +89,8 @@ module.exports = {
                 ]
 
             },
+            // Css style
             {
-                // Css style
                 test: /\.css$/,
                 use: [
                     'style-loader',
@@ -112,7 +107,7 @@ module.exports = {
                         }
                     },
                 ]
-            }
+            },
         ]
     },
     plugins: [
@@ -139,7 +134,17 @@ module.exports = {
         }),
         ...PAGES.map(page => new HtmlWebpackPlugin({
             template: `${PAGES_DIR}/${page}`,
-            filename: `./${page.replace(/\.pug/, '.html')}`
-        }))
+            filename: `./${page}`
+        })),
+        // new HtmlWebpackPlugin({
+        //     template: `${PATHS.src}/${PATHS.assets}html/index.html`, // PAGES_DIR
+        //     filename: './index.html',
+        //     inject: true
+        // }),
+        new HtmlWebpackPlugin({
+            template: `${PATHS.src}/${PATHS.assets}html/index.html`, // PAGES_DIR
+            filename: './index.html',
+            inject: true
+        }),
     ],
 }
