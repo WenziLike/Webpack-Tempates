@@ -1,0 +1,63 @@
+// ===============================================================
+//! Подключения......
+// ===============================================================
+// основные настройки сброса и подключения шрифтов "Главные"
+@import "utils/variables.scss";
+@import "utils/AModernCSSReset.scss";
+@import "utils/fonts.scss";
+@import "utils/mixins.scss";
+@import "utils/animations.scss";
+@import "utils/media.scss";
+
+// ===============================================================
+//отдельные компоненты сайта components
+
+// ===============================================================
+// основные блоки страницы сайта modules
+// ===============================================================
+// общие стили
+
+body {
+    font-family: $mainFont;
+    font-size: 1em;
+    overflow-wrap: break-word;
+    color: $aliceblue;
+    background-color: $vs-code-color;
+}
+// body {
+//     height: 100%; //!для фуллскрина
+//     main {
+//         display: flex;
+//         flex-direction: column;
+//         min-height: 100vh; //! для фуллскрина
+//         //     .header__body,
+//         //     .menu__body,
+//         //     .method__body,
+//         //     .reviews__body,
+//         //     .courses__body,
+//         //     .footer__body {
+//         //         width: 100%;
+//         //         max-width: 1200px;
+//         //         margin: 0 auto;
+//         //         padding: 0 20px; // общие отсупы контента от блока //!padding: 1% 2% 0 2%;
+//         //     }
+//     }
+// }
+// ===============================================================
+body {
+    margin-bottom: 0;
+}
+
+#app {
+    position: relative;
+}
+.content {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 200px;
+}
+
+h1 {
+    color: $color-lghtgre;
+}

@@ -1,6 +1,6 @@
-const webpack = require('webpack')
-const { merge } = require('webpack-merge')
-const baseWebpackConfig = require('./webpack.base.conf')
+const webpack = require('webpack');
+const { merge } = require('webpack-merge');
+const baseWebpackConfig = require('./webpack.base.conf');
 
 
 
@@ -20,9 +20,9 @@ const devWebpackConfig = merge(baseWebpackConfig, {
             filename: "[file].map"
         })
     ]
-})
+});
 
 module.exports = new Promise((resolve, reject) => {
     "use strict";
-    resolve(devWebpackConfig)
-})
+    resolve(devWebpackConfig);
+});

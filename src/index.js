@@ -1,15 +1,13 @@
 "use strict";
-//==================================================================
-// JS
-import "./js/base"// импорт с доп.файла скрипта JacaScript
+// импортировали файлы  JS
 
-// Css
-// import "./css/main.css"// импортируем Css файл
+
+//==================================================================
+// Css импортирую подключенные Иконочные шрифты 
+import "./assets/css/fonts.css";  // импортируем Css файл
+// import "./assets/css/main.css"// импортируем Css файл
 
 // SCSS
-// import "./scss/main.scss"// импортируем Scss файл
-import "./assets/scss/main.scss"
+// import "./scss/main.scss";// импортируем Scss файл
+import "./assets/scss/style.scss";
 //==================================================================
-
-
-

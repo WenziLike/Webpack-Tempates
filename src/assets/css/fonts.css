@@ -1,0 +1,79 @@
+@font-face {
+    font-family: my-icons;
+    src: url("../fonts/my-icons.eot");src: url("../fonts/my-icons.eot?c5b7819c#iefix") format("embedded-opentype"),
+             url("../fonts/my-icons.woff2?c5b7819c") format("woff2"),
+             url("../fonts/my-icons.woff?c5b7819c") format("woff"),
+             url("../fonts/my-icons.ttf?c5b7819c") format("truetype"),
+             url("../fonts/my-icons.svg?c5b7819c#my-icons") format("svg");
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="ico"], [class*=" ico"] {
+    font-family: 'my-icons' !important;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-style: normal;
+}
+
+
+.ico-bootstrap::before {
+    content: "\ea01";
+}
+
+.ico-css::before {
+    content: "\ea02";
+}
+
+.ico-facebook::before {
+    content: "\ea03";
+}
+
+.ico-geoposition::before {
+    content: "\ea04";
+}
+
+.ico-gulp::before {
+    content: "\ea05";
+}
+
+.ico-html::before {
+    content: "\ea06";
+}
+
+.ico-instagram::before {
+    content: "\ea07";
+}
+
+.ico-linkedin::before {
+    content: "\ea08";
+}
+
+.ico-mail::before {
+    content: "\ea09";
+}
+
+.ico-moon::before {
+    content: "\ea0a";
+}
+
+.ico-phone::before {
+    content: "\ea0b";
+}
+
+.ico-sass::before {
+    content: "\ea0c";
+}
+
+.ico-skype::before {
+    content: "\ea0d";
+}
+
+.ico-sun::before {
+    content: "\ea0e";
+}
+
+.ico-webpack::before {
+    content: "\ea0f";
+}
+
